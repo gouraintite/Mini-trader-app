@@ -4,3 +4,4 @@ MarketBuyOrder::MarketBuyOrder(Client* client, Instrument* instrument, int quant
     : MarketOrder(client, instrument, quantity) {}
 
 bool MarketBuyOrder::isBuy() const {}
+void MarketBuyOrder::display(std::ostream& os) const {}

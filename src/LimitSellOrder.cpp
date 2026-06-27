@@ -4,3 +4,4 @@ LimitSellOrder::LimitSellOrder(Client* client, Instrument* instrument, int quant
     : LimitOrder(client, instrument, quantity, limitPrice) {}
 
 bool LimitSellOrder::isBuy() const {}
+void LimitSellOrder::display(std::ostream& os) const {}

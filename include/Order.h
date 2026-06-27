@@ -26,6 +26,7 @@ public:
 
     virtual double getPrice() const = 0;
     virtual bool isBuy() const = 0;
+    virtual void display(std::ostream& os) const = 0;
 
     bool operator<(const Order& other) const;
     friend std::ostream& operator<<(std::ostream& os, const Order& order);

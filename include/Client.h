@@ -4,15 +4,15 @@
 #include "Portfolio.h"
 
 class Client {
-    int id;
+    std::string id;
     std::string name;
     double cashBalance;
     Portfolio portfolio;
 
 public:
-    Client(int id, const std::string& name, double initialCash = 0.0);
+    Client(const std::string& id, const std::string& name, double initialCash = 0.0);
 
-    int getId() const;
+    const std::string& getId() const;
     const std::string& getName() const;
     double getCashBalance() const;
     Portfolio& getPortfolio();

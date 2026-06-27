@@ -2,37 +2,27 @@
 #include <stdexcept>
 #include <string>
 
-class InsufficientFundsException : public std::exception {
-    std::string msg;
+class InsufficientFundsException : public std::runtime_error {
 public:
     explicit InsufficientFundsException(const std::string& detail);
-    const char* what() const noexcept override;
 };
 
-class InsufficientSharesException : public std::exception {
-    std::string msg;
+class InsufficientSharesException : public std::runtime_error {
 public:
     explicit InsufficientSharesException(const std::string& detail);
-    const char* what() const noexcept override;
 };
 
-class InvalidOrderException : public std::exception {
-    std::string msg;
+class InvalidOrderException : public std::runtime_error {
 public:
     explicit InvalidOrderException(const std::string& detail);
-    const char* what() const noexcept override;
 };
 
-class ClientNotFoundException : public std::exception {
-    std::string msg;
+class ClientNotFoundException : public std::runtime_error {
 public:
     explicit ClientNotFoundException(const std::string& detail);
-    const char* what() const noexcept override;
 };
 
-class InstrumentNotFoundException : public std::exception {
-    std::string msg;
+class InstrumentNotFoundException : public std::runtime_error {
 public:
     explicit InstrumentNotFoundException(const std::string& detail);
-    const char* what() const noexcept override;
 };

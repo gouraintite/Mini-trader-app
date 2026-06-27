@@ -1,10 +1,10 @@
 #include "Client.h"
 #include "Exceptions.h"
 
-Client::Client(int id, const std::string& name, double initialCash)
+Client::Client(const std::string& id, const std::string& name, double initialCash)
     : id(id), name(name), cashBalance(initialCash) {}
 
-int Client::getId() const {}
+const std::string& Client::getId() const {}
 const std::string& Client::getName() const {}
 double Client::getCashBalance() const {}
 Portfolio& Client::getPortfolio() {}

@@ -4,6 +4,7 @@
 #include <string>
 #include "Client.h"
 #include "Instrument.h"
+#include "Position.h"
 #include "OrderBook.h"
 #include "Trade.h"
 

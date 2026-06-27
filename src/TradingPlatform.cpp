@@ -30,9 +30,15 @@ Instrument& TradingPlatform::getInstrument(const std::string& symbol) {
 
 // Cash & position seeding
 
-void TradingPlatform::depositCash(const std::string& clientId, double amount) {}
+void TradingPlatform::depositCash(const std::string& clientId, double amount) {
+    getClient(clientId).deposit(amount);
+}
 
-void TradingPlatform::addPosition(const std::string& clientId, const std::string& symbol, int quantity, double acquisitionPrice) {}
+void TradingPlatform::addPosition(const std::string& clientId, const std::string& symbol, int quantity, double acquisitionPrice) {
+    Client&     client     = getClient(clientId);
+    Instrument& instrument = getInstrument(symbol);
+    client.getPortfolio() += Position(&instrument, quantity, acquisitionPrice);
+}
 
 // Order placement
 
